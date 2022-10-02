@@ -1,5 +1,5 @@
 var imagesize = 220;
-var linesize = 1000;
+var linesize = imagesize / 2 * 55;
 var url = "http://208.87.133.114:5000/static/shanshan/"
 function lineMove(linesize, imagsize, wsize) {
   var elem = document.getElementById("line");
@@ -90,7 +90,7 @@ function movehtml(tpos) {
 function clinedit(id, url, imgid) {
   var cline = document.getElementById(id);
   var aurl = document.createElement("img");
-  aurl.setAttribute("src", "data:" + url + ";base64");
+  aurl.setAttribute("src", url);
   aurl.setAttribute("id", imgid);
   cline.appendChild(aurl);
 }

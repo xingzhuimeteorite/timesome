@@ -1,5 +1,5 @@
 from base64 import b64encode
-usrpath = "static"
+usrpath = "/root/code/static/picture"
 class Pic:
     def __init__(self,dir,name):
         self.dir = dir
@@ -20,7 +20,7 @@ def get_img_stream(path):
     with open(path,"rb") as img:
         img_r = img.read()
         img_s = b64encode(img_r).decode()
-    return img_s
+    return img_r
 
 
 
